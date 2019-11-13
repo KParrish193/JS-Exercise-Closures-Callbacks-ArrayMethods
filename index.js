@@ -162,8 +162,14 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
+  // 1. search array for first instance (indexOf)
+  // 2. (filter) any following results that are === to first instance of
+  // 3. return the callback/de-duped list
+  
+  const noDupes = list.filter((item, index) => list.indexOf(item) === index)
+  
+  return callback(noDupes)
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
